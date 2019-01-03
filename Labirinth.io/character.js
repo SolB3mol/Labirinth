@@ -6,7 +6,7 @@ canvas.height = window.innerHeight -6;
 
 var c = canvas.getContext('2d');
 var a = canvas.getContext('2d');
-
+c.translate(-8,-8);
 var motion = 0;
 var speed = 5;
 var i = 0;
@@ -106,7 +106,7 @@ var lasty;
 var xPosition;
 var yPosition;
 var q = '#000000';
-var case1, case2, case3, case4, lastDirection = 0;
+var case1, case2, case3, case4, lastDirection = 0, x , y , ra;
 
 function torch1(){
   var torch1 = new Image();
@@ -394,14 +394,14 @@ document.onkeyup = stop;
 document.onkeydown = move;
 
     requestAnimationFrame(animate);
-    c.clearRect(0, 0,innerWidth, innerHeight);
+   c.clearRect(0, 0,innerWidth, innerHeight);
+
     c.beginPath();
+
     torch();
     directionAnimation();
-    c.strokeStyle = '#FFFFFF';
-    c.stroke;
-    c.arc(300, 300, 50, 0, Math.PI*2, false );
-    c.stroke;
+
+
 if(l){xPos-=speed}
 if(r){xPos+=speed}
 if(u){yPos+=speed}
